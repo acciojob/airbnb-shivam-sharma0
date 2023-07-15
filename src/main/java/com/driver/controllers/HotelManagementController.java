@@ -29,6 +29,7 @@ public class HotelManagementController {
     @PostMapping("/add-hotel")
     public String addHotel(@RequestBody Hotel hotel){
 
+        if (hotel.getHotelName().equals("")) return "";
         //You need to add an hotel to the database
         //incase the hotelName is null or the hotel Object is null return an empty a FAILURE
         //Incase somebody is trying to add the duplicate hotelName return FAILURE
