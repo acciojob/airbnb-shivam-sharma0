@@ -18,7 +18,7 @@ public class HotelServices {
     HotelRepository hotelRepository= new HotelRepository();
     public String addHotel(Hotel hotel) {
         if(hotel==null)return "FAILURE";
-        if(hotel.getHotelName().equals(""))return  "FAILURE";
+        if(hotel.getHotelName()==null)return  "FAILURE";
 
         String res=hotelRepository.addHotel(hotel);
         return res;
