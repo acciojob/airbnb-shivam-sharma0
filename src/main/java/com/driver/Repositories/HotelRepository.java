@@ -44,7 +44,7 @@ public class HotelRepository {
                 max=hotel1.getFacilities().size();
             }
         }
-        if (max==Integer.MIN_VALUE)return "";
+        if (max==Integer.MIN_VALUE || max==0)return "";
         return resHotel.getHotelName();
     }
 
