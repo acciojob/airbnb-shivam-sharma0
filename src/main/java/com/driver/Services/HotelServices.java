@@ -15,7 +15,7 @@ import java.util.List;
 public class HotelServices {
 
     @Autowired
-    HotelRepository hotelRepository;
+    HotelRepository hotelRepository= new HotelRepository();
     public String addHotel(Hotel hotel) {
         if(hotel==null)return "FAILURE";
         if(hotel.getHotelName().equals(""))return  "FAILURE";
